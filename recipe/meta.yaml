@@ -23,6 +23,7 @@ build:
   # If this is a new build for the same version, increment the build number.
   number: 0
 
+
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
@@ -31,13 +32,15 @@ build:
 # Suggests: ocedata, foreign, ncdf4, tiff, akima, RSQLite, DBI, rgdal (>= 1.1-9), R.utils, knitr, rmarkdown, marmap, lubridate
 requirements:
   build:
-    - r-base
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('fortran') }}  # [not win]
     - {{native}}toolchain        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
+
+  host:
+    - r-base
     - r-gsw
     - r-testthat
 
