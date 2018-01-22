@@ -10,8 +10,8 @@ package:
 source:
   fn: oce_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/oce_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/oce/oce_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/oce_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/oce/oce_{{ version }}.tar.gz
   sha256: 50da1c1d047b82045f513fd7632e599cdd76d1cdfc1fbff0f813e8922199af73
 
 
