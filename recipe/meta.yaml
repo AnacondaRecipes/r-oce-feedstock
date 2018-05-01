@@ -1,4 +1,4 @@
-{% set version = '0.9-22' %}
+{% set version = '0.9-23' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,18 +12,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/oce_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/oce/oce_{{ version }}.tar.gz
-  sha256: 50da1c1d047b82045f513fd7632e599cdd76d1cdfc1fbff0f813e8922199af73
-
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
+  sha256: 390fd082710ee1586074ff20df61208df4c76b9f2dc0c9b1125aade4c934b04c
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
-
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -84,7 +78,7 @@ extra:
 # Package: oce
 # Type: Package
 # Title: Analysis of Oceanographic Data
-# Version: 0.9-22
+# Version: 0.9-23
 # Authors@R: c(person(given="Dan", family="Kelley", email="Dan.Kelley@Dal.Ca", role=c("aut", "cre")), person(given="Clark", family="Richards", email="clark.richards@gmail.com", role=c("aut")), person(given="Chantelle", family="Layton", email="chantelle.layton@dal.ca", role=c("ctb"), comment="curl() coauthor"), person(given="British Geological Survey", role=c("ctb","cph"), comment="magnetic-field subroutine"))
 # Maintainer: Dan Kelley <Dan.Kelley@Dal.Ca>
 # Depends: R (>= 2.15), utils, methods, gsw, testthat
@@ -99,10 +93,10 @@ extra:
 # BuildVignettes: true
 # VignetteBuilder: knitr
 # NeedsCompilation: yes
-# Packaged: 2017-08-28 15:25:38 UTC; kelley
+# Packaged: 2018-01-28 19:14:15 UTC; kelley
 # Author: Dan Kelley [aut, cre], Clark Richards [aut], Chantelle Layton [ctb] (curl() coauthor), British Geological Survey [ctb, cph] (magnetic-field subroutine)
 # Repository: CRAN
-# Date/Publication: 2017-08-28 18:50:30 UTC
+# Date/Publication: 2018-01-28 21:13:31 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
